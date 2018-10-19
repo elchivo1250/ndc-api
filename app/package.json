@@ -1,0 +1,52 @@
+{
+  "name": "ndc-api",
+  "version": "0.1.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/elchivo1250/ndc-api.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "test": "ava test",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "async-csv": "^2.0.0",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "csv": "^4.0.0",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-connector-mysql": "^5.3.1",
+    "loopback-ds-timestamp-mixin": "^3.4.1",
+    "nan": "^2.11.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "ava": "^0.25.0",
+    "loopback-cli": "^4.2.1"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elchivo1250/ndc-api/issues"
+  },
+  "homepage": "https://github.com/elchivo1250/ndc-api#readme",
+  "keywords": [
+    "fda",
+    "ndc",
+    "api",
+    "loopback"
+  ],
+  "author": "elchivo1250",
+  "description": "An API for the FDA's NDC database"
+}
