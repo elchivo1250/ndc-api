@@ -13,7 +13,7 @@ services:
         entrypoint: "npm start -- --max-old-space-size=4096"
 
     db:
-        image: "mysql:8.0.12"
+        image: "mysql:8.0.3"
         env_file:
             - "./config/config.env"
             - "./config/secrets.env"
