@@ -1,0 +1,44 @@
+version: "3.5"
+services:
+    npm:
+        image: node:10.12.0
+        volumes:
+            - "./app:/app"
+        working_dir: "/app"
+        env_file:
+            - "./config/config.env"
+            - "./config/secrets.env"
+        ports:
+            - "3001:3000"
+        entrypoint:
+            - "npm"
+        command:
+            - "install"
+
+    lb:
+        image: node:10.12.0
+        volumes:
+            - "./app:/app"
+        working_dir: "/app"
+        entrypoint:
+            - "node_modules/.bin/lb"
+
+    updateSchema:
+        image: node:10.12.0-alpine
+        env_file:
+            - "./config/config.env"
+            - "./config/secrets.env"
+        volumes:
+            - "./app:/app"
+        working_dir: /app
+        entrypoint: "node -e 'require(\"./server/bin/create-tables.js\").create();'"
+
+    seedData:
+        image: node:10.12.0-alpine
+        env_file:
+            - "./config/config.env"
+            - "./config/secrets.env"
+        volumes:
+            - "./app:/app"
+        working_dir: /app
+        entrypoint: "node -e 'require(\"./server/bin/import-csv.js\").load();'"
