@@ -8,12 +8,18 @@ This project is a simple API for the FDA's NDC database.
 
 ## Installation
 
+- Copy config/secrets.dist.env to config/secrets.env and set values for all the environment variables.
+
+Run the following commands:
+
 ```
 docker-compose -f services.yml run --rm npm install
 docker-compose up -d db
 ```
 
-After the database container starts, wait ~10 seconds for mysql to actually start. Then, run:
+After the database container starts, wait 10-30 seconds for mysql to actually start. 
+
+Finally, run:
 
 ```
 docker-compose -f services.yml run --rm updateSchema
@@ -32,3 +38,7 @@ PHARM_CLASSES
 These columns have incredibly long strings, and their inclusion makes the current csv parsing library freak out about heap size and die a terrible death. This will be addressed in future versions.
 
 The data is contained in ./app/data/
+
+Access the API explorer at https://host:port/explorer
+
+The default port for loopback is 3001. 
