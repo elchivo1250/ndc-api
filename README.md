@@ -30,10 +30,10 @@ To seed the data in the database, send a POST request to http://host/api/Drugs/u
 
 Ultimately, the fetching and processing of the FDA CSV data will be automated. Until then, if you want newer drugs in the system, you'll have to download and pre-process the CSV file. If you choose to go this route, you must delete the following columns from the CSV:
 
-LABELERNAME
-ACTIVE_NUMERATOR_STRENGTH	
-ACTIVE_INGRED_UNIT	
-PHARM_CLASSES	
+- LABELERNAME
+- ACTIVE_NUMERATOR_STRENGTH	
+- ACTIVE_INGRED_UNIT	
+- PHARM_CLASSES	
 
 These columns have incredibly long strings, and their inclusion makes the current csv parsing library freak out about heap size and die a terrible death. This will be addressed in future versions.
 
