@@ -1,0 +1,106 @@
+{
+  "name": "Drug",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "productId": {
+      "type": "String",
+      "required": false
+    },
+    "productNDC": {
+      "type": "String",
+      "required": false
+    },
+    "ndcPackageCode": {
+      "type": "String",
+      "required": false
+    },
+    "packageDescription": {
+      "type": "Text",
+      "required": false
+    },
+    "startMarketingDate": {
+      "type": "String",
+      "required": false
+    },
+    "endMarketingDate": {
+      "type": "String",
+      "required": false
+    },
+    "ndcExcludeFlag": {
+      "type": "String",
+      "required": false
+    },
+    "samplePackage": {
+      "type": "Text",
+      "required": false
+    },
+    "productTypeName": {
+      "type": "String",
+      "required": false
+    },
+    "proprietaryName": {
+      "type": "String",
+      "required": false
+    },
+    "proprietaryNameSuffix": {
+      "type": "String",
+      "required": false
+    },
+    "nonProprietaryName": {
+      "type": "String",
+      "required": false
+    },
+    "dosageFormName": {
+      "type": "String",
+      "required": false
+    },
+    "routeName": {
+      "type": "String",
+      "required": false
+    },
+    "marketingCategoryName": {
+      "type": "String",
+      "required": false
+    },
+    "applicationNumber": {
+      "type": "String",
+      "required": false
+    },
+    "labelerName": {
+      "type": "String",
+      "required": false
+    },
+    "substanceName": {
+      "type": "Text",
+      "required": false
+    },
+    "activeNumeratorStrength": {
+      "type": "String",
+      "required": false
+    },
+    "activeIngredientUnit": {
+      "type": "String",
+      "required": false
+    },
+    "pharmClasses": {
+      "type": "String",
+      "required": false
+    },
+    "deaSchedule": {
+      "type": "String",
+      "required": false
+    },
+    "listingRecordCertifiedThrough": {
+      "type": "String",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

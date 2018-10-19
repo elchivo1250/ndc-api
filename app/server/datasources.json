@@ -1,0 +1,11 @@
+{
+  "db": {
+    "host": "${MYSQL_HOST}",
+    "port": "${MYSQL_PORT}",
+    "database": "${MYSQL_DATABASE}",
+    "password": "${MYSQL_PASSWORD}",
+    "name": "db",
+    "user": "${MYSQL_USER}",
+    "connector": "mysql"
+  }
+}
