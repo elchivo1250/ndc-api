@@ -12,7 +12,13 @@
     },
     "productNDC": {
       "type": "String",
-      "required": false
+      "required": false,
+      "index": true
+    },
+    "productNDCInt": {
+      "type": "String",
+      "required": false,
+      "index": true
     },
     "ndcPackageCode": {
       "type": "String",

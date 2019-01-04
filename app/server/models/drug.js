@@ -42,10 +42,11 @@ module.exports = function(Drug) {
 
             drugs = packages.map((drug) => {
                 const product = productMap[drug.PRODUCTNDC];
-
+                
                 return {
                     productId: drug.PRODUCTID,
                     productNDC: drug.PRODUCTNDC,
+                    productNDCInt: drug.PRODUCTNDC.replace(/[^0-9\.]+/g, ''),
                     ndcPackageCode: drug.NDCPACKAGECODE,
                     packageDescription: drug.PACKAGEDESCRIPTION,
                     startMarketingDate: drug.STARTMARKETINGDATE,
